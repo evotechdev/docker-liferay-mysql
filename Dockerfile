@@ -12,7 +12,7 @@ RUN apt-get update && \
 	apt-get install -y curl unzip ssh nano vim net-tools git && \
 	apt-get clean
 
-#Migration to alpine
+#Migration to alpine :TODO ref link: https://wiki.alpinelinux.org/wiki/Alpine_Linux_package_management
 #RUN apk update && \
 #	apk add curl unzip ssh nano vim net-tools git && \
 	
