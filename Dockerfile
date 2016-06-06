@@ -1,6 +1,7 @@
 FROM ubuntu:xenial
+#FROM alpine:latest
 
-MAINTAINER Cristiano Toncelli <ct.livorno@gmail.com>
+MAINTAINER Michael Angelo B. Sevilla <sevilla.mab@gmail.com>
 
 # Users and groups
 # RUN groupadd -r tomcat && useradd -r -g tomcat tomcat
@@ -8,8 +9,12 @@ RUN echo "root:Docker!" | chpasswd
 
 # Install packages
 RUN apt-get update && \
-	apt-get install -y curl unzip ssh vim net-tools git && \
+	apt-get install -y curl unzip ssh nano vim net-tools git && \
 	apt-get clean
+
+#Migration to alpine
+#RUN apk update && \
+#	apk add curl unzip ssh nano vim net-tools git && \
 	
 # Export TERM as "xterm"
 RUN echo -e "\nexport TERM=xterm" >> ~/.bashrc
