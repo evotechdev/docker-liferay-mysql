@@ -30,7 +30,7 @@ docker run --name lep-as -p 80:8080 -p 443:8443 --link lep-db -d ctliv/liferay:6
 ## Launching using "docker-compose":
 
 ```
-git clone https://github.com/ctliv/docker-liferay-mysql
+git clone https://github.com/evotechdev/docker-liferay-mysql
 cd docker-liferay-mysql
 docker-compose up
 # For production mode use: docker-compose -f docker-compose-prod.yml up
